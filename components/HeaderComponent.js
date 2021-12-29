@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginHorizontal: 12,
   },
   textContainer: {
     marginLeft: 18,
