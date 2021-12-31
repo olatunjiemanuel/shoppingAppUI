@@ -33,7 +33,7 @@ const homeScreen = () => {
           <View>
             <BagItemComponent
               image={require('../assets/Images/greyBag.png')}
-              mainText="Artsy"
+              mainText="Berkely"
             />
           </View>
         </View>
@@ -41,13 +41,13 @@ const homeScreen = () => {
           <View>
             <BagItemComponent
               image={require('../assets/Images/blackBag.png')}
-              mainText="Artsy"
+              mainText="Capucinus"
             />
           </View>
           <View>
             <BagItemComponent
               image={require('../assets/Images/greenBag.png')}
-              mainText="Artsy"
+              mainText="Monogram"
             />
           </View>
         </View>

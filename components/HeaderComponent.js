@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 
 import colors from '../assets/colors';
 
@@ -10,15 +10,16 @@ const HeaderComponent = props => {
   const {text, image} = props;
   return (
     <View style={styles.headerContainer}>
-      <View style={styles.options}>
+      <TouchableOpacity style={styles.options}>
         <OptionsSVG />
-      </View>
+      </TouchableOpacity>
       <View style={styles.textContainer}>
         <Text style={[styles.text, {color: colors.black}]}>{text}</Text>
       </View>
-      <View style={[styles.imageContainer, {backgroundColor: colors.black}]}>
+      <TouchableOpacity
+        style={[styles.imageContainer, {backgroundColor: colors.black}]}>
         <Image source={image} />
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };
