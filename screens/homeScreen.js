@@ -5,6 +5,7 @@ import SeasonsLatestComponent from '../components/SeasonsLatestComponent';
 //component imports
 import HeaderComponent from '../components/HeaderComponent';
 import BagItemComponent from '../components/BagItemComponent';
+import CategoryComponent from '../components/CatergoryComponent';
 
 const homeScreen = () => {
   return (
@@ -58,6 +59,39 @@ const homeScreen = () => {
         <Text style={{fontWeight: '700', fontSize: 24, lineHeight: 30.19}}>
           Shop by categories
         </Text>
+      </View>
+      <View style={{marginTop: 24, marginHorizontal: 12}}>
+        <View style={styles.itemWrapper}>
+          <View>
+            <CategoryComponent
+              text="Handle bags"
+              image={require('../assets/Images/handleBags.png')}
+            />
+          </View>
+          <View>
+            <CategoryComponent
+              text="Crossbody bags"
+              image={require('../assets/Images/crossBodyBags.png')}
+            />
+          </View>
+        </View>
+        <View style={[styles.itemWrapper, {marginTop: 24}]}>
+          <View>
+            <CategoryComponent
+              text="Shoulder bags"
+              image={require('../assets/Images/shoulderBags.png')}
+            />
+          </View>
+          <View>
+            <CategoryComponent
+              text="Tote bag"
+              image={require('../assets/Images/toteBag.png')}
+            />
+          </View>
+        </View>
+      </View>
+      <View style={[styles.textContainer, {width: 240}]}>
+        <Text style={styles.text}>BROWSE ALL CATERGORIES</Text>
       </View>
     </ScrollView>
   );
