@@ -1,5 +1,11 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import SeasonsLatestComponent from '../components/SeasonsLatestComponent';
 
 //component imports
@@ -52,9 +58,9 @@ const homeScreen = () => {
           </View>
         </View>
       </View>
-      <View style={styles.textContainer}>
+      <TouchableOpacity style={styles.textContainer}>
         <Text style={styles.text}>CHECK ALL LATEST</Text>
-      </View>
+      </TouchableOpacity>
       <View style={{marginTop: 48, marginHorizontal: 20}}>
         <Text style={{fontWeight: '700', fontSize: 24, lineHeight: 30.19}}>
           Shop by categories
@@ -90,9 +96,9 @@ const homeScreen = () => {
           </View>
         </View>
       </View>
-      <View style={[styles.textContainer, {width: 240}]}>
+      <TouchableOpacity style={[styles.textContainer, {width: 240}]}>
         <Text style={styles.text}>BROWSE ALL CATERGORIES</Text>
-      </View>
+      </TouchableOpacity>
     </ScrollView>
   );
 };
