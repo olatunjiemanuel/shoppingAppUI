@@ -7,7 +7,11 @@ import {
   TouchableOpacity,
   Modal,
 } from 'react-native';
+import {useState} from 'react';
 import SeasonsLatestComponent from '../components/SeasonsLatestComponent';
+
+// color imports
+import colors from '../assets/colors';
 
 //component imports
 import HeaderComponent from '../components/HeaderComponent';
@@ -15,9 +19,18 @@ import BagItemComponent from '../components/BagItemComponent';
 import CategoryComponent from '../components/CatergoryComponent';
 
 const homeScreen = () => {
+  const [openModal, setmodalOpen] = useState(true);
   return (
     <ScrollView style={styles.homeContainer}>
-      <Modal visible={false}></Modal>
+      <Modal transparent={true} visible={openModal}>
+        <View style={styles.modalContainer}>
+          <TouchableOpacity
+            onPress={() => {
+              setmodalOpen(false);
+            }}
+            style={styles.modalLine}></TouchableOpacity>
+        </View>
+      </Modal>
       <View>
         <HeaderComponent
           text="bagzz"
@@ -129,5 +142,19 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     lineHeight: 18.77,
     fontSize: 16,
+  },
+  modalContainer: {
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    marginTop: 250,
+    flex: 1,
+    borderTopRightRadius: 40,
+    borderTopLeftRadius: 40,
+  },
+  modalLine: {
+    marginTop: 10,
+    marginHorizontal: 145,
+    width: 125,
+    height: 2,
+    backgroundColor: colors.black,
   },
 });
