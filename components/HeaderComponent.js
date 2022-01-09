@@ -4,14 +4,14 @@ import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import colors from '../assets/colors';
 
 //sVG imports
-import OptionsSVG from '../assets/SVGs/OptionsSVG';
+import OptionsSvg from '../assets/SVGs/OptionsSVG';
 
 const HeaderComponent = props => {
   const {text, image} = props;
   return (
     <View style={styles.headerContainer}>
       <TouchableOpacity style={styles.options}>
-        <OptionsSVG />
+        <OptionsSvg />
       </TouchableOpacity>
       <View style={styles.textContainer}>
         <Text style={[styles.text, {color: colors.black}]}>{text}</Text>

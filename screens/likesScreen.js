@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   ScrollView,
   StyleSheet,
@@ -7,16 +7,15 @@ import {
   TouchableOpacity,
   Modal,
 } from 'react-native';
-import {useState} from 'react';
-import SeasonsLatestComponent from '../components/SeasonsLatestComponent';
 
 // color imports
 import colors from '../assets/colors';
 
 //component imports
-import HeaderComponent from '../components/HeaderComponent';
-import BagItemComponent from '../components/BagItemComponent';
-import CategoryComponent from '../components/CatergoryComponent';
+import Header from '../components/HeaderComponent';
+import BagItem from '../components/BagItemComponent';
+import Category from '../components/CatergoryComponent';
+import SeasonsLatest from '../components/SeasonsLatestComponent';
 
 const homeScreen = () => {
   const [openModal, setmodalOpen] = useState(true);
@@ -32,13 +31,13 @@ const homeScreen = () => {
         </View>
       </Modal>
       <View>
-        <HeaderComponent
+        <Header
           text="bagzz"
           image={require('../assets/Images/userprofilepic.png')}
         />
       </View>
       <View style={{marginTop: 28}}>
-        <SeasonsLatestComponent
+        <SeasonsLatest
           image1={require('../assets/Images/SeasonsLatest1.png')}
           image2={require('../assets/Images/SeasonsLatest2.png')}
         />
@@ -46,13 +45,13 @@ const homeScreen = () => {
       <View style={{marginHorizontal: 12, marginTop: 30}}>
         <View style={styles.itemWrapper}>
           <View>
-            <BagItemComponent
+            <BagItem
               image={require('../assets/Images/redBag.png')}
               mainText="Artsy"
             />
           </View>
           <View>
-            <BagItemComponent
+            <BagItem
               image={require('../assets/Images/greyBag.png')}
               mainText="Berkely"
             />
@@ -60,13 +59,13 @@ const homeScreen = () => {
         </View>
         <View style={[styles.itemWrapper, {marginTop: 24}]}>
           <View>
-            <BagItemComponent
+            <BagItem
               image={require('../assets/Images/blackBag.png')}
               mainText="Capucinus"
             />
           </View>
           <View>
-            <BagItemComponent
+            <BagItem
               image={require('../assets/Images/greenBag.png')}
               mainText="Monogram"
             />
@@ -84,13 +83,13 @@ const homeScreen = () => {
       <View style={{marginTop: 24, marginHorizontal: 12}}>
         <View style={styles.itemWrapper}>
           <View>
-            <CategoryComponent
+            <Category
               text="Handle bags"
               image={require('../assets/Images/handleBags.png')}
             />
           </View>
           <View>
-            <CategoryComponent
+            <Category
               text="Crossbody bags"
               image={require('../assets/Images/crossBodyBags.png')}
             />
@@ -98,13 +97,13 @@ const homeScreen = () => {
         </View>
         <View style={[styles.itemWrapper, {marginTop: 24}]}>
           <View>
-            <CategoryComponent
+            <Category
               text="Shoulder bags"
               image={require('../assets/Images/shoulderBags.png')}
             />
           </View>
           <View>
-            <CategoryComponent
+            <Category
               text="Tote bag"
               image={require('../assets/Images/toteBag.png')}
             />

@@ -8,13 +8,13 @@ import {
 } from 'react-native';
 
 // component imports
-import HeaderComponent from '../components/HeaderComponent';
+import Header from '../components/HeaderComponent';
 
 const searchScreen = () => {
   return (
     <View style={styles.searchPageContainer}>
       <View>
-        <HeaderComponent
+        <Header
           text="bagzz"
           image={require('../assets/Images/userprofilepic.png')}
         />
