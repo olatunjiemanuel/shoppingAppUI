@@ -14,16 +14,17 @@ const SeasonsLatestComponent = props => {
         <Image source={image2} />
       </ScrollView>
       <View style={styles.textContainer}>
-        <View style={[styles.text, {width: 50}]}>
+        <View style={{width: 50}}>
           <Text style={styles.text}>This</Text>
         </View>
-        <View style={[styles.text, {width: 92}]}>
+        <View style={{width: 92}}>
           <Text style={styles.text}>season's</Text>
         </View>
-        <View style={[styles.text, {width: 60}]}>
+        <View style={{width: 60}}>
           <Text style={styles.text}>latest</Text>
         </View>
       </View>
+      {/* we need to find a better way to render THIS SEASON'S LATEST banner */}
     </View>
   );
 };
@@ -47,5 +48,6 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontSize: 22,
     backgroundColor: '#fff',
+    // paddingHorizontal: 3
   },
 });
