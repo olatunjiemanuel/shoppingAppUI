@@ -122,7 +122,7 @@ export default homeScreen;
 
 const styles = StyleSheet.create({
   homeContainer: {
-    marginTop: 40,
+    paddingTop: 40,
     backgroundColor: '#fff',
   },
   itemWrapper: {
