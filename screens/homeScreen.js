@@ -63,38 +63,38 @@ function App() {
               <Text style={styles.modalText}>X</Text>
             </TouchableOpacity>
             <ScrollView style={styles.customTextInputCntnr}>
-              <View>
+              <View style={{paddingBottom: 20}}>
                 <CustomTextInput
                   formTitle="Item name"
                   placeHolder="Enter item name"
                 />
               </View>
-              <View>
+              <View style={{paddingBottom: 20}}>
                 <CustomTextInput
                   formTitle="Item id"
                   placeHolder="Enter item id"
                 />
               </View>
-              <View>
+              <View style={{paddingBottom: 20}}>
                 <CustomTextInput
                   formTitle="Item summary"
                   placeHolder="Describe this item"
                 />
               </View>
-              <View>
+              <View style={{paddingBottom: 20}}>
                 <CustomTextInput
                   formTitle="Amount in stock"
                   placeHolder="How many of these items are in stock ?"
                 />
               </View>
-              <View>
+              <View style={{paddingBottom: 20}}>
                 <CustomTextInput
                   formTitle="Item price"
                   placeHolder="Enter a price for this item"
                 />
               </View>
               <View>
-                <CustomButton buttonText="Add image" />
+                <CustomButton buttonText=" + Add image" />
               </View>
             </ScrollView>
           </View>
@@ -150,8 +150,9 @@ const styles = StyleSheet.create({
   addItemModal: {
     flex: 1,
     backgroundColor: 'white',
-    margin: 30,
+    marginHorizontal: 20,
     borderRadius: 10,
+    marginVertical: 40,
   },
   modalCloseButton: {
     marginTop: 10,
